@@ -1,0 +1,212 @@
+2016-01-16 23:37:21,415 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:37:21,416 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:37:21,416 - flaskapp - db.py - init_db INFO - Checking if db needs creating.
+2016-01-16 23:37:21,417 - flaskapp - db.py - execute INFO - executing: SELECT * FROM scoreboard order by score limit 10
+2016-01-16 23:37:21,418 - flaskapp - flaskapp.py - logging_jsonify INFO - Response for GET to /fetchTop10: {}
+2016-01-16 23:47:59,026 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:47:59,026 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:47:59,027 - flaskapp - db.py - init_db INFO - Checking if db needs creating.
+2016-01-16 23:48:45,346 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:48:45,348 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:48:45,349 - flaskapp - db.py - init_db INFO - Checking if db needs creating.
+2016-01-16 23:48:45,351 - flaskapp - flaskapp.py - log_request INFO - Request: GET /addScore?score=234&name=wil
+2016-01-16 23:49:16,018 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:49:16,020 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:49:16,021 - flaskapp - db.py - init_db INFO - Checking if db needs creating.
+2016-01-16 23:49:16,023 - flaskapp - flaskapp.py - log_request INFO - Request: GET /addScore?score=234&name=wil
+2016-01-16 23:49:16,024 - flaskapp - db.py - execute_cur INFO - executing in cursor: INSERT INTO scoreboard(name, score, timestamp)
+    values(?, ?, ?)
+2016-01-16 23:50:34,826 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:50:34,828 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:50:34,829 - flaskapp - db.py - init_db INFO - Checking if db needs creating.
+2016-01-16 23:50:34,832 - flaskapp - flaskapp.py - log_request INFO - Request: GET /addScore?score=234&name=wil
+2016-01-16 23:50:34,833 - flaskapp - db.py - execute_cur INFO - executing in cursor: INSERT INTO scoreboard(name, score, timestamp)
+    values(?, ?, ?)
+2016-01-16 23:50:34,850 - flaskapp - flaskapp.py - logging_jsonify INFO - Response for GET to /addScore: {
+  "id": 2, 
+  "name": "wil", 
+  "score": "234", 
+  "timestamp": "Sat, 16 Jan 2016 23:50:34 GMT"
+}
+2016-01-16 23:50:40,694 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:50:40,695 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:50:40,696 - flaskapp - db.py - init_db INFO - Checking if db needs creating.
+2016-01-16 23:50:40,697 - flaskapp - flaskapp.py - log_request INFO - Request: GET /fetchTop10
+2016-01-16 23:50:40,698 - flaskapp - db.py - execute INFO - executing: SELECT * FROM scoreboard order by score limit 10
+2016-01-16 23:54:29,562 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:54:29,563 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:54:29,565 - flaskapp - db.py - init_db INFO - Checking if db needs creating.
+2016-01-16 23:54:29,568 - flaskapp - flaskapp.py - log_request INFO - Request: GET /fetchTop10
+2016-01-16 23:54:29,568 - flaskapp - db.py - execute INFO - executing: SELECT * FROM scoreboard order by score limit 10
+2016-01-16 23:54:29,573 - flaskapp - flaskapp.py - logging_jsonify INFO - Response for GET to /fetchTop10: {
+  "scores": [
+    {
+      "id": 1, 
+      "name": "wil", 
+      "score": 234, 
+      "timestamp": "2016-01-16 23:49:16.024013"
+    }, 
+    {
+      "id": 2, 
+      "name": "wil", 
+      "score": 234, 
+      "timestamp": "2016-01-16 23:50:34.833489"
+    }
+  ]
+}
+2016-01-16 23:54:39,083 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:54:39,085 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:54:39,086 - flaskapp - db.py - init_db INFO - Checking if db needs creating.
+2016-01-16 23:54:39,090 - flaskapp - flaskapp.py - log_request INFO - Request: GET /addScore?score=0&name=wil
+2016-01-16 23:54:39,091 - flaskapp - db.py - execute_cur INFO - executing in cursor: INSERT INTO scoreboard(name, score, timestamp)
+    values(?, ?, ?)
+2016-01-16 23:54:39,114 - flaskapp - flaskapp.py - logging_jsonify INFO - Response for GET to /addScore: {
+  "id": 3, 
+  "name": "wil", 
+  "score": "0", 
+  "timestamp": "Sat, 16 Jan 2016 23:54:39 GMT"
+}
+2016-01-16 23:54:43,822 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:54:43,822 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:54:43,823 - flaskapp - db.py - init_db INFO - Checking if db needs creating.
+2016-01-16 23:54:43,824 - flaskapp - flaskapp.py - log_request INFO - Request: GET /addScore?score=512&name=wil
+2016-01-16 23:54:43,825 - flaskapp - db.py - execute_cur INFO - executing in cursor: INSERT INTO scoreboard(name, score, timestamp)
+    values(?, ?, ?)
+2016-01-16 23:54:43,853 - flaskapp - flaskapp.py - logging_jsonify INFO - Response for GET to /addScore: {
+  "id": 4, 
+  "name": "wil", 
+  "score": "512", 
+  "timestamp": "Sat, 16 Jan 2016 23:54:43 GMT"
+}
+2016-01-16 23:54:48,087 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:54:48,089 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:54:48,090 - flaskapp - db.py - init_db INFO - Checking if db needs creating.
+2016-01-16 23:54:48,094 - flaskapp - flaskapp.py - log_request INFO - Request: GET /fetchTop10
+2016-01-16 23:54:48,095 - flaskapp - db.py - execute INFO - executing: SELECT * FROM scoreboard order by score limit 10
+2016-01-16 23:54:48,100 - flaskapp - flaskapp.py - logging_jsonify INFO - Response for GET to /fetchTop10: {
+  "scores": [
+    {
+      "id": 3, 
+      "name": "wil", 
+      "score": 0, 
+      "timestamp": "2016-01-16 23:54:39.091032"
+    }, 
+    {
+      "id": 1, 
+      "name": "wil", 
+      "score": 234, 
+      "timestamp": "2016-01-16 23:49:16.024013"
+    }, 
+    {
+      "id": 2, 
+      "name": "wil", 
+      "score": 234, 
+      "timestamp": "2016-01-16 23:50:34.833489"
+    }, 
+    {
+      "id": 4, 
+      "name": "wil", 
+      "score": 512, 
+      "timestamp": "2016-01-16 23:54:43.825331"
+    }
+  ]
+}
+2016-01-16 23:55:17,219 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:55:17,221 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:55:17,223 - flaskapp - db.py - init_db INFO - Checking if db needs creating.
+2016-01-16 23:55:17,226 - flaskapp - flaskapp.py - log_request INFO - Request: GET /fetchTop10
+2016-01-16 23:55:17,227 - flaskapp - db.py - execute INFO - executing: SELECT * FROM scoreboard order by score asc limit 10
+2016-01-16 23:55:17,235 - flaskapp - flaskapp.py - logging_jsonify INFO - Response for GET to /fetchTop10: {
+  "scores": [
+    {
+      "id": 3, 
+      "name": "wil", 
+      "score": 0, 
+      "timestamp": "2016-01-16 23:54:39.091032"
+    }, 
+    {
+      "id": 1, 
+      "name": "wil", 
+      "score": 234, 
+      "timestamp": "2016-01-16 23:49:16.024013"
+    }, 
+    {
+      "id": 2, 
+      "name": "wil", 
+      "score": 234, 
+      "timestamp": "2016-01-16 23:50:34.833489"
+    }, 
+    {
+      "id": 4, 
+      "name": "wil", 
+      "score": 512, 
+      "timestamp": "2016-01-16 23:54:43.825331"
+    }
+  ]
+}
+2016-01-16 23:55:27,470 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:55:27,471 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:55:27,472 - flaskapp - db.py - init_db INFO - Checking if db needs creating.
+2016-01-16 23:55:27,475 - flaskapp - flaskapp.py - log_request INFO - Request: GET /fetchTop10
+2016-01-16 23:55:27,475 - flaskapp - db.py - execute INFO - executing: SELECT * FROM scoreboard order by score asc limit 10
+2016-01-16 23:55:27,480 - flaskapp - flaskapp.py - logging_jsonify INFO - Response for GET to /fetchTop10: {
+  "scores": [
+    {
+      "id": 3, 
+      "name": "wil", 
+      "score": 0, 
+      "timestamp": "2016-01-16 23:54:39.091032"
+    }, 
+    {
+      "id": 1, 
+      "name": "wil", 
+      "score": 234, 
+      "timestamp": "2016-01-16 23:49:16.024013"
+    }, 
+    {
+      "id": 2, 
+      "name": "wil", 
+      "score": 234, 
+      "timestamp": "2016-01-16 23:50:34.833489"
+    }, 
+    {
+      "id": 4, 
+      "name": "wil", 
+      "score": 512, 
+      "timestamp": "2016-01-16 23:54:43.825331"
+    }
+  ]
+}
+2016-01-16 23:55:47,631 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:55:47,632 - flaskapp - db.py - connect_db INFO - Connecting to db
+2016-01-16 23:55:47,632 - flaskapp - db.py - init_db INFO - Checking if db needs creating.
+2016-01-16 23:55:47,634 - flaskapp - flaskapp.py - log_request INFO - Request: GET /fetchTop10
+2016-01-16 23:55:47,634 - flaskapp - db.py - execute INFO - executing: SELECT * FROM scoreboard order by score desc limit 10
+2016-01-16 23:55:47,638 - flaskapp - flaskapp.py - logging_jsonify INFO - Response for GET to /fetchTop10: {
+  "scores": [
+    {
+      "id": 4, 
+      "name": "wil", 
+      "score": 512, 
+      "timestamp": "2016-01-16 23:54:43.825331"
+    }, 
+    {
+      "id": 1, 
+      "name": "wil", 
+      "score": 234, 
+      "timestamp": "2016-01-16 23:49:16.024013"
+    }, 
+    {
+      "id": 2, 
+      "name": "wil", 
+      "score": 234, 
+      "timestamp": "2016-01-16 23:50:34.833489"
+    }, 
+    {
+      "id": 3, 
+      "name": "wil", 
+      "score": 0, 
+      "timestamp": "2016-01-16 23:54:39.091032"
+    }
+  ]
+}
