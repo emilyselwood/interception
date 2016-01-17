@@ -13,6 +13,8 @@ var canvas = document.getElementById( 'c' ),
 
     gradients = {},
 
+    currentQuestion = {},
+
     bgCanvas = document.createElement( 'canvas' ),
     bgCtx = bgCanvas.getContext( '2d' );
 
@@ -91,13 +93,16 @@ function fillBackground(){
     anim();
     
     var xhr = new XMLHttpRequest;
-    xhr.open( 'GET', data.location + '-data.txt' );
+    xhr.open( 'GET', data.location + '-data.json' );
     xhr.onload = function(){
         
         data.loaded = true;
         var object = JSON.parse( xhr.responseText );
         data.questions = object.questions;
         data.points = object.points;
+	data.sections = object.sections;
+
+	data.score = 0;
 
         player.x = data.questions[ 0 ].x;
         player.y = data.questions[ 0 ].y;
@@ -112,11 +117,19 @@ function incrementLevel(){
     
     ++player.n;
 
+    if( player.n > data.questions.length )
+        return finishModal();
+
     player.end = data.questions( player.n );
     player.dx = player.end.x - player.x;
     player.dy = player.end.y - player.y;
 
     player.moving = true;
+
+    anim();
+}
+function finishModal(){
+
 }
 function drawQuestion( question ){
 
@@ -140,6 +153,106 @@ function drawPlayer( armonic ){
     ctx.fillRect( -scale * 5, -scale * 5, scale * 10, scale * 10 );
     ctx.translate( -x, -y );
     
+}
+
+function displayQuestion( question ){
+
+    var element = document.createElement( 'div' );
+    element.className = 'popup';
+    element.style.setProperty( 'top', question.point.y );
+    element.style.setProperty( 'left', question.point.x );
+
+    var sectionText = '';
+    for( var i = 0; i < data.sections.length; ++i )
+        if( data.sections[ i ].name === question.section )
+	   sectionText = data.sections[ i ].content;
+    
+    element.innerHTML = '<div class="section">\
+                            <p>SECTION</p>\
+			 </div>\
+                         <div class="question">\
+                           QUESTION\
+			 </div>\
+			 <div class="answers">\
+			    <div class="options">\
+			    </div>\
+			    <div class="image">\
+			       <img src="IMG-SRC">\
+			    </div>\
+			 </div>'
+	.replace( 'SECTION', question.section + ' - ' + sectionText )
+	.replace( 'QUESTION', '<h1>' + question.index + '</h1><p>' + question.content + '</p>' )
+	.replace( 'IMG-SRC', question.imageSrc );
+
+    var optionsEl = element.querySelector( '.options' );
+
+    currentQuestion.answers = [];
+    currentQuestion.markedAnswers = 0;
+    currentQuestion.maxAnswers = question.maxAnswers;
+
+    for( var i = 0; i < question.answers.length; ++i ){
+    
+        var answer = question.answers[ i ],
+	    
+	    optionEl = document.createElement( 'p' ),
+	    clickable = document.createElement( 'button' ),
+	    contentEl = document.createElement( 'span' );
+
+	contentEl.textContent = answer.content;
+
+	optionEl.appendChild( clickable );
+	optionEl.appendChild( contentEl );
+
+	optionsEl.appendChild( optionEl );
+
+	clickable.addEventListener( 'click', getClick( optionEl, i ) );
+        
+	currentQuestion.answers.push( { marked: false, weight: answer.weight } );
+    }
+
+    var sendEl = document.createElement( 'button' );
+    sendEl.addEventListener( 'click', (function( element ){
+       
+        return function(){
+	    
+	    element.classList.add( 'disappear' );
+
+	    var score = 0;
+	    for( var i = 0; i < currentQuestion.answers.length; ++i )
+	        if( currentQuestion.answers[ i ].marked )
+		    score += currentQuestion.answers[ i ].weight;
+
+            data.score += score;
+
+	    window.setTimeout( function(){
+	        
+		document.body.removeChild( element );
+
+		incrementLevel();
+
+	    }, 200 );
+	}
+    })() )
+}
+function getClick( element, index ){
+
+    return function(){
+
+        var answer = currentQuestion.answers[ index ];
+        
+	if( answer.marked ){
+	
+            --currentQuestion.markedAnswers;
+	    answer.marked = false;
+	    element.className = '';
+
+	} else if( currentQuestion.markedAnswers < currentQuestion.maxAnswer ){
+	
+	    ++currentQuestion.markedAnswers;
+	    answer.marked = true;
+	    element.className = 'marked';
+	}
+    }
 }
 
 function anim(){
