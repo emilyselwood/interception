@@ -93,6 +93,38 @@ function incrementLevel(){
     anim();
 }
 function finishModal(){
+
+    var element = document.createElement( 'div' );
+    element.className = 'scoreboard';
+
+    element.innerHTML = '\
+        <ul></ul>\
+	<div>\
+	   <p>Want to be in the scoreboard? Put your 3 letter name below</p>\
+	   <p><input type="text" value="Glo"> nick</p>\
+	   <p><button></button></p>\
+	</div>';
+    var xhr = new XMLHttpRequest();
+    xhr.open( 'GET', 'https://intercepter-floodhack.rhcloud.com/fetchTop10' );
+    xhr.onload = function(){
+
+	var el = document.body.querySelector( 'div.scoreboard ul' ),
+	    array = (JSON.parse( xhr.responseText )).scores;
+	for( var i = 0; i < array.length; ++i )
+	   el.innerHTML += '<li><span>' + array[ i ].name + '</span><span>' + array [ i ].score + '</span></li>';
+    }
+    xhr.send();
+    document.body.appendChild( element );
+    var button = element.querySelector( 'button' );
+    button.addEventListener( 'click', function(){
+
+	var value = document.body.querySelector( 'div.scoreboard button' ).value.split('').splice( 0, 3 ).join(''),
+	    xhr2 = new XMLHttpRequest();
+        document.body.querySelector( 'div.scoreboard > div' ).innerHTML = 'Go back to the <a href="http://intercepter-floodhack.rhcloud.com/static/globe/flooding.html">main page</a>';
+
+	xhr2.open( 'GET', 'https://intercepter-floodhack.rhcloud.com/addScore?name=' + value + '&score=' + score );
+	xhr2.send();
+    } )
 }
 function drawQuestion( question ){
     var x = question.point.x * scale + cx,
