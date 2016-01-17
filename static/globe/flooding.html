@@ -470,6 +470,9 @@ function game_transition(){
   setTimeout(function(){
     $('#location').css('visibility','hidden');
     dest_z = 90;
+    setTimeout(function() {
+      window.location.href = "/static/play/index.html";      
+    }, 1000)
   }, 1000);
 }
   </script>
