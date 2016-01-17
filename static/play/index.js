@@ -117,6 +117,7 @@ function drawPlayer( armonic ){
 
 }
 function displayQuestion( question ){
+    question.done = true;
     var element = document.createElement( 'div' );
     element.className = 'popup';
     element.style.setProperty( 'top', 'calc( 50% ' + ( question.point.y < 0 ? '- ' : '+ ' ) + Math.abs( question.point.y * scale ) + 'px )' );
@@ -144,7 +145,8 @@ function displayQuestion( question ){
 	.replace( 'SECTION', '<b>' + question.section + '</b>' + ' - ' + sectionText )
 	.replace( 'QUESTION', '<h1>' + question.index + '</h1><p>' + question.content + '</p>' )
 	.replace( 'IMG-SRC', question.imageSrc );
-    var optionsEl = element.querySelector( '.options' );
+    var optionsEl = element.querySelector( '.options' ),
+        questionEl = element.querySelector( '.question' );
     currentQuestion.answers = [];
     currentQuestion.markedAnswers = 0;
     currentQuestion.maxAnswers = question.maxAnswers;
@@ -191,7 +193,12 @@ function displayQuestion( question ){
 	element.classList.add( 'active' );
 	element.style.setProperty( 'top', 'calc( 50% - 250px )' );
 	element.style.setProperty( 'left', 'calc( 50% - 250px )' );
-    }, 60 )
+	var question = element.querySelector( 'div.question' ),
+	    answers = element.querySelector( 'div.answers' ),
+	    qRect = question.getBoundingClientRect(),
+	    eRect = element.getBoundingClientRect();
+	answers.style.setProperty( 'height', ( eRect.bottom - qRect.bottom - 30 ) + 'px' );
+    }, 500 );
 }
 function getClick( index ){
     return '                                                                                  \
