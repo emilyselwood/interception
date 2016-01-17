@@ -103,18 +103,6 @@
               "content": "Ensure that you have an emergency flood kit",
               "weight": 1
             },
-            {
-              "content": "Call the police to let them know about the flood event",
-              "weight": -1
-            },
-            {
-              "content": "Prepare sand bags",
-              "weight": -1
-            },
-            {
-              "content": "Empty the fridge and freezer",
-              "weight": -1
-            }
           ],
           "imageSrc": "https://dl.dropboxusercontent.com/u/3789247/interception/q3.png"
         },
