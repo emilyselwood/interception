@@ -36,7 +36,7 @@ app.logger.setLevel(logging.DEBUG)
 @app.route('/')
 @app.route('/index.html')
 def index():
-    return redirect('/static/globe/flooding.html', 300)
+    return redirect('/static/globe/flooding.html', 302)
 
 @app.route('/fetchTop10', methods=['GET'])
 def scoreboard():
