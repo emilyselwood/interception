@@ -9,8 +9,8 @@
       "maxAnswers": 1,
       "answers": [
         {
-          "content": "A",
-          "weight": 0
+          "content": "Understood.",
+          "weight": 1
         }
       ],
       "imageSrc": ""
@@ -268,7 +268,8 @@
               "weight": -1
             },
             {
-              "content": "For people to take small items of value to them": 1
+              "content": "For people to take small items of value to them",
+              "weight": 1
             },
             {
               "content": "For people to take their weapons with them for protection",
@@ -415,7 +416,11 @@
         },
         {
           "name": "Section B",
+<<<<<<< HEAD
           "content": "You have arrived in the flood alert location and need to start helping the local people who are vulnerable to this flood event:"
+=======
+          "content": "You have now arrived in the flood alert location"
+>>>>>>> a55f4584d992b7822683b587fe1c97491ee8f4bd
         },
         {
           "name": "Section C",

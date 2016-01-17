@@ -13,7 +13,7 @@ import urllib
 import datetime
 
 from logging.handlers import RotatingFileHandler
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, redirect
 
 import db
 
@@ -36,7 +36,7 @@ app.logger.setLevel(logging.DEBUG)
 @app.route('/')
 @app.route('/index.html')
 def index():
-    return render_template('index.html')
+    return redirect('/static/globe/flooding.html', 300)
 
 @app.route('/fetchTop10', methods=['GET'])
 def scoreboard():

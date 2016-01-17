@@ -1,0 +1,543 @@
+{
+	"server": "http://nomads.ncdc.noaa.gov/thredds/wms/gfs-003/201601/20160107/gfs_3_20160107_0000_048.grb",
+	"server_": "http://localhost:8051/nomads.ncdc.noaa.gov/thredds/wms/gfs-003/201601/20160107/gfs_3_20160107_0000_048.grb",
+	"menu":"nomads.ncdc.noaa.gov/thredds/wms/gfs-003/201601/20160107/gfs_3_20160107_0000_048.grb",
+	"layers": [
+		[
+			"Categorical_rain",
+			"Categorical_rain_Average (Average for 6 hours Intervals) @ surface"
+		],
+		[
+			"Convective_precip_rate",
+			"Convective_precip_rate_Average (Average for 6 hours Intervals) @ surface"
+		],
+		[
+			"Categorical_snow",
+			"Categorical_snow_Average (Average for 6 hours Intervals) @ surface"
+		],
+		[
+			"Ground_heat_flux",
+			"Ground_heat_flux_Average (Average for 6 hours Intervals) @ surface"
+		],
+		[
+			"Meridional_momentum_flux",
+			"Meridional_momentum_flux_Average (Average for 6 hours Intervals) @ surface"
+		],
+		[
+			"Precipitation_rate",
+			"Precipitation_rate_Average (Average for 6 hours Intervals) @ surface"
+		],
+		[
+			"Pressure_high_cloud_bottom",
+			"Pressure_Average (Average for 6 hours Intervals) @ high_cloud_bottom"
+		],
+		[
+			"Pressure_high_cloud_top",
+			"Pressure_Average (Average for 6 hours Intervals) @ high_cloud_top"
+		],
+		[
+			"Pressure_low_cloud_bottom",
+			"Pressure_Average (Average for 6 hours Intervals) @ low_cloud_bottom"
+		],
+		[
+			"Pressure_low_cloud_top",
+			"Pressure_Average (Average for 6 hours Intervals) @ low_cloud_top"
+		],
+		[
+			"Pressure_middle_cloud_bottom",
+			"Pressure_Average (Average for 6 hours Intervals) @ middle_cloud_bottom"
+		],
+		[
+			"Pressure_middle_cloud_top",
+			"Pressure_Average (Average for 6 hours Intervals) @ middle_cloud_top"
+		],
+		[
+			"Categorical_freezing_rain",
+			"Categorical_freezing_rain_Average (Average for 6 hours Intervals) @ surface"
+		],
+		[
+			"Cloud_work_function",
+			"Cloud_work_function_Average (Average for 6 hours Intervals) @ entire_atmosphere"
+		],
+		[
+			"Temperature_high_cloud_top",
+			"Temperature_Average (Average for 6 hours Intervals) @ high_cloud_top"
+		],
+		[
+			"Temperature_low_cloud_top",
+			"Temperature_Average (Average for 6 hours Intervals) @ low_cloud_top"
+		],
+		[
+			"Temperature_middle_cloud_top",
+			"Temperature_Average (Average for 6 hours Intervals) @ middle_cloud_top"
+		],
+		[
+			"Convective_precipitation",
+			"Convective_precipitation_Accumulation (Accumulation for 6 hours Intervals) @ surface"
+		],
+		[
+			"Total_cloud_cover",
+			"Total_cloud_cover_Average (Average for 6 hours Intervals) @ boundary_layer_cloud_layer"
+		],
+		[
+			"Total_cloud_cover_entire_atmosphere",
+			"Total_cloud_cover_Average (Average for 6 hours Intervals) @ entire_atmosphere"
+		],
+		[
+			"Total_cloud_cover_high_cloud_layer",
+			"Total_cloud_cover_Average (Average for 6 hours Intervals) @ high_cloud_layer"
+		],
+		[
+			"Total_cloud_cover_low_cloud_layer",
+			"Total_cloud_cover_Average (Average for 6 hours Intervals) @ low_cloud_layer"
+		],
+		[
+			"Total_cloud_cover_middle_cloud_layer",
+			"Total_cloud_cover_Average (Average for 6 hours Intervals) @ middle_cloud_layer"
+		],
+		[
+			"Zonal_momentum_flux",
+			"Zonal_momentum_flux_Average (Average for 6 hours Intervals) @ surface"
+		],
+		[
+			"Albedo",
+			"Albedo_Average (Average for 6 hours Intervals) @ surface"
+		],
+		[
+			"Zonal_gravity_wave_stress",
+			"Zonal_gravity_wave_stress_Average (Average for 6 hours Intervals) @ surface"
+		],
+		[
+			"Downward_long_wave_flux",
+			"Downward_long_wave_flux_Average (Average for 6 hours Intervals) @ surface"
+		],
+		[
+			"Downward_short_wave_flux",
+			"Downward_short_wave_flux_Average (Average for 6 hours Intervals) @ surface"
+		],
+		[
+			"Upward_long_wave_flux",
+			"Upward_long_wave_flux_Average (Average for 6 hours Intervals) @ atmosphere_top"
+		],
+		[
+			"Upward_long_wave_flux_surface",
+			"Upward_long_wave_flux_Average (Average for 6 hours Intervals) @ surface"
+		],
+		[
+			"Upward_short_wave_flux",
+			"Upward_short_wave_flux_Average (Average for 6 hours Intervals) @ atmosphere_top"
+		],
+		[
+			"Upward_short_wave_flux_surface",
+			"Upward_short_wave_flux_Average (Average for 6 hours Intervals) @ surface"
+		],
+		[
+			"Total_precipitation",
+			"Total_precipitation_Accumulation (Accumulation for 6 hours Intervals) @ surface"
+		],
+		[
+			"Latent_heat_flux",
+			"Latent_heat_flux_Average (Average for 6 hours Intervals) @ surface"
+		],
+		[
+			"Categorical_ice_pellets",
+			"Categorical_ice_pellets_Average (Average for 6 hours Intervals) @ surface"
+		],
+		[
+			"Meridional_gravity_wave_stress",
+			"Meridional_gravity_wave_stress_Average (Average for 6 hours Intervals) @ surface"
+		],
+		[
+			"Sensible_heat_flux",
+			"Sensible_heat_flux_Average (Average for 6 hours Intervals) @ surface"
+		],
+		[
+			"Water_runoff",
+			"Water_runoff_Accumulation (Accumulation for 6 hours Intervals) @ surface"
+		],
+		[
+			"Pressure_of_level_from_which_parcel_was_lifted",
+			"Pressure_of_level_from_which_parcel_was_lifted @ layer_between_two_pressure_difference_from_ground"
+		],
+		[
+			"Pressure_vertical_velocity",
+			"Pressure_vertical_velocity @ isobaric"
+		],
+		[
+			"Cloud_water",
+			"Cloud_water @ isobaric"
+		],
+		[
+			"Storm_relative_helicity",
+			"Storm_relative_helicity @ layer_between_two_heights_above_ground"
+		],
+		[
+			"N5-wave_geopotential_height",
+			"N5-wave_geopotential_height @ isobaric"
+		],
+		[
+			"Soil_temperature",
+			"Soil_temperature @ layer_between_two_depths_below_surface"
+		],
+		[
+			"Volumetric_soil_moisture",
+			"Volumetric_soil_moisture @ layer_between_two_depths_below_surface"
+		],
+		[
+			"u_wind_height_above_ground",
+			"u_wind @ height_above_ground"
+		],
+		[
+			"v_wind_height_above_ground",
+			"v_wind @ height_above_ground"
+		],
+		[
+			"Temperature_height_above_ground",
+			"Temperature @ height_above_ground"
+		],
+		[
+			"Total_ozone",
+			"Total_ozone @ entire_atmosphere"
+		],
+		[
+			"u_wind_Unknown220",
+			"u_wind @ Unknown220"
+		],
+		[
+			"u_wind_maximum_wind",
+			"u_wind @ maximum_wind"
+		],
+		[
+			"u_wind_tropopause",
+			"u_wind @ tropopause"
+		],
+		[
+			"Snow_depth",
+			"Snow_depth @ surface"
+		],
+		[
+			"Pressure_reduced_to_MSL",
+			"Pressure_reduced_to_MSL @ msl"
+		],
+		[
+			"Accumulated_snow",
+			"Accumulated_snow @ surface"
+		],
+		[
+			"Relative_humidity_entire_atmosphere",
+			"Relative_humidity @ entire_atmosphere"
+		],
+		[
+			"Relative_humidity_highest_tropospheric_freezing",
+			"Relative_humidity @ highest_tropospheric_freezing"
+		],
+		[
+			"Relative_humidity_zeroDegC_isotherm",
+			"Relative_humidity @ zeroDegC_isotherm"
+		],
+		[
+			"Land_cover_land1sea0",
+			"Land_cover_land1sea0 @ surface"
+		],
+		[
+			"Pressure_convective_cloud_bottom",
+			"Pressure @ convective_cloud_bottom"
+		],
+		[
+			"Pressure_convective_cloud_top",
+			"Pressure @ convective_cloud_top"
+		],
+		[
+			"Pressure_maximum_wind",
+			"Pressure @ maximum_wind"
+		],
+		[
+			"Pressure_surface",
+			"Pressure @ surface"
+		],
+		[
+			"Pressure_tropopause",
+			"Pressure @ tropopause"
+		],
+		[
+			"Wilting_point",
+			"Wilting_point @ surface"
+		],
+		[
+			"Convective_inhibition_surface",
+			"Convective_inhibition @ surface"
+		],
+		[
+			"Surface_lifted_index",
+			"Surface_lifted_index @ surface"
+		],
+		[
+			"ICAO_Standard_Atmosphere_Reference_Height",
+			"ICAO_Standard_Atmosphere_Reference_Height @ maximum_wind"
+		],
+		[
+			"ICAO_Standard_Atmosphere_Reference_Height_tropopause",
+			"ICAO_Standard_Atmosphere_Reference_Height @ tropopause"
+		],
+		[
+			"Surface_wind_gust",
+			"Surface_wind_gust @ surface"
+		],
+		[
+			"Ice_concentration_ice1no_ice0",
+			"Ice_concentration_ice1no_ice0 @ surface"
+		],
+		[
+			"Temperature_maximum_wind",
+			"Temperature @ maximum_wind"
+		],
+		[
+			"Temperature_surface",
+			"Temperature @ surface"
+		],
+		[
+			"Temperature_tropopause",
+			"Temperature @ tropopause"
+		],
+		[
+			"Field_Capacity",
+			"Field_Capacity @ surface"
+		],
+		[
+			"Total_cloud_cover_convective_cloud_layer",
+			"Total_cloud_cover @ convective_cloud_layer"
+		],
+		[
+			"Best_4-layer_lifted_index",
+			"Best_4-layer_lifted_index @ surface"
+		],
+		[
+			"Potential_evaporation_rate",
+			"Potential_evaporation_rate @ surface"
+		],
+		[
+			"undefined",
+			"undefined @ Unknown220"
+		],
+		[
+			"undefined_surface",
+			"undefined @ surface"
+		],
+		[
+			"Mean_sea_level_pressure_NAM_model",
+			"Mean_sea_level_pressure_NAM_model @ msl"
+		],
+		[
+			"Precipitable_water",
+			"Precipitable_water @ entire_atmosphere"
+		],
+		[
+			"Geopotential_height_highest_tropospheric_freezing",
+			"Geopotential_height @ highest_tropospheric_freezing"
+		],
+		[
+			"Geopotential_height_maximum_wind",
+			"Geopotential_height @ maximum_wind"
+		],
+		[
+			"Geopotential_height_surface",
+			"Geopotential_height @ surface"
+		],
+		[
+			"Geopotential_height_tropopause",
+			"Geopotential_height @ tropopause"
+		],
+		[
+			"Geopotential_height_zeroDegC_isotherm",
+			"Geopotential_height @ zeroDegC_isotherm"
+		],
+		[
+			"Cloud_water_entire_atmosphere",
+			"Cloud_water @ entire_atmosphere"
+		],
+		[
+			"Covariance_between_v_and_omega",
+			"Covariance_between_v_and_omega @ surface"
+		],
+		[
+			"Vertical_speed_shear_tropopause",
+			"Vertical_speed_shear @ tropopause"
+		],
+		[
+			"Convective_Avail_Pot_Energy_surface",
+			"Convective_Avail_Pot_Energy @ surface"
+		],
+		[
+			"Planetary_boundary_layer_height",
+			"Planetary_boundary_layer_height @ surface"
+		],
+		[
+			"v_wind_Unknown220",
+			"v_wind @ Unknown220"
+		],
+		[
+			"v_wind_maximum_wind",
+			"v_wind @ maximum_wind"
+		],
+		[
+			"v_wind_tropopause",
+			"v_wind @ tropopause"
+		],
+		[
+			"u_wind_sigma",
+			"u_wind @ sigma"
+		],
+		[
+			"Potential_temperature",
+			"Potential_temperature @ sigma"
+		],
+		[
+			"Relative_humidity_sigma",
+			"Relative_humidity @ sigma"
+		],
+		[
+			"Temperature_sigma",
+			"Temperature @ sigma"
+		],
+		[
+			"Pressure_vertical_velocity_sigma",
+			"Pressure_vertical_velocity @ sigma"
+		],
+		[
+			"v_wind_sigma",
+			"v_wind @ sigma"
+		],
+		[
+			"Dew_point_temperature",
+			"Dew_point_temperature @ height_above_ground"
+		],
+		[
+			"Relative_humidity_height_above_ground",
+			"Relative_humidity @ height_above_ground"
+		],
+		[
+			"undefined_height_above_ground",
+			"undefined @ height_above_ground"
+		],
+		[
+			"Relative_humidity_layer_between_two_sigmas",
+			"Relative_humidity @ layer_between_two_sigmas"
+		],
+		[
+			"u_wind_potential_vorticity_surface",
+			"u_wind @ potential_vorticity_surface"
+		],
+		[
+			"Pressure",
+			"Pressure @ potential_vorticity_surface"
+		],
+		[
+			"Temperature_potential_vorticity_surface",
+			"Temperature @ potential_vorticity_surface"
+		],
+		[
+			"Geopotential_height_potential_vorticity_surface",
+			"Geopotential_height @ potential_vorticity_surface"
+		],
+		[
+			"Vertical_speed_shear",
+			"Vertical_speed_shear @ potential_vorticity_surface"
+		],
+		[
+			"v_wind_potential_vorticity_surface",
+			"v_wind @ potential_vorticity_surface"
+		],
+		[
+			"Pressure_height_above_ground",
+			"Pressure @ height_above_ground"
+		],
+		[
+			"u_wind_altitude_above_msl",
+			"u_wind @ altitude_above_msl"
+		],
+		[
+			"Temperature_altitude_above_msl",
+			"Temperature @ altitude_above_msl"
+		],
+		[
+			"v_wind_altitude_above_msl",
+			"v_wind @ altitude_above_msl"
+		],
+		[
+			"u-component_of_storm_motion",
+			"u-component_of_storm_motion @ layer_between_two_heights_above_ground"
+		],
+		[
+			"v-component_of_storm_motion",
+			"v-component_of_storm_motion @ layer_between_two_heights_above_ground"
+		],
+		[
+			"Min_temperature",
+			"Min_temperature (6 hours Intervals) @ height_above_ground"
+		],
+		[
+			"Max_temperature",
+			"Max_temperature (6 hours Intervals) @ height_above_ground"
+		],
+		[
+			"Specific_humidity",
+			"Specific_humidity @ height_above_ground"
+		],
+		[
+			"Specific_humidity_layer_between_two_pressure_difference_from_ground",
+			"Specific_humidity @ layer_between_two_pressure_difference_from_ground"
+		],
+		[
+			"u_wind_layer_between_two_pressure_difference_from_ground",
+			"u_wind @ layer_between_two_pressure_difference_from_ground"
+		],
+		[
+			"Relative_humidity_layer_between_two_pressure_difference_from_ground",
+			"Relative_humidity @ layer_between_two_pressure_difference_from_ground"
+		],
+		[
+			"Temperature_layer_between_two_pressure_difference_from_ground",
+			"Temperature @ layer_between_two_pressure_difference_from_ground"
+		],
+		[
+			"v_wind_layer_between_two_pressure_difference_from_ground",
+			"v_wind @ layer_between_two_pressure_difference_from_ground"
+		],
+		[
+			"Ozone_mixing_ratio",
+			"Ozone_mixing_ratio @ isobaric"
+		],
+		[
+			"u_wind",
+			"u_wind @ isobaric"
+		],
+		[
+			"Absolute_vorticity",
+			"Absolute_vorticity @ isobaric"
+		],
+		[
+			"Relative_humidity",
+			"Relative_humidity @ isobaric"
+		],
+		[
+			"Temperature",
+			"Temperature @ isobaric"
+		],
+		[
+			"Geopotential_height",
+			"Geopotential_height @ isobaric"
+		],
+		[
+			"v_wind",
+			"v_wind @ isobaric"
+		],
+		[
+			"Convective_inhibition",
+			"Convective_inhibition @ layer_between_two_pressure_difference_from_ground"
+		],
+		[
+			"Convective_Avail_Pot_Energy",
+			"Convective_Avail_Pot_Energy @ layer_between_two_pressure_difference_from_ground"
+		]
+	]
+}
