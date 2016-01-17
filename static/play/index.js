@@ -84,7 +84,7 @@ function fillBackground(){
 function incrementLevel(){
 
     ++player.n;
-    if( player.n > data.questions.length )
+    if( player.n >= data.questions.length )
         return finishModal();
     player.end = data.questions[ player.n ].point;
     player.dx = player.end.x - player.x;
@@ -102,7 +102,7 @@ function finishModal(){
 	<div>\
 	   <p>Want to be in the scoreboard? Put your 3 letter name below</p>\
 	   <p><input type="text" value="Glo"> nick</p>\
-	   <p><button></button></p>\
+	   <p><button>Send</button></p>\
 	</div>';
     var xhr = new XMLHttpRequest();
     xhr.open( 'GET', 'https://intercepter-floodhack.rhcloud.com/fetchTop10' );
