@@ -22,7 +22,7 @@ app.config.from_pyfile('flaskapp.cfg')
 app.register_blueprint(db.blueprint)
 
 # logging config
-log_root = os.path.join(os.environ.get('OPENSHIFT_APP_ROOT','./'), ('logs') )
+log_root = os.environ.get('OPENSHIFT_LOG_DIR','./logs')
 log_file = os.path.join(log_root, ('intercepter.log'))
 # five files ten megabytes (10 * 1024 * 1024) in size.
 handler = RotatingFileHandler(log_file , maxBytes=10485760, backupCount=5)
