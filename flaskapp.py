@@ -6,7 +6,7 @@ import sys
 import io
 import json
 import time
-import requests
+# import requests
 import glob
 import logging
 import urllib
