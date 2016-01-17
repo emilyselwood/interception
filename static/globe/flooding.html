@@ -235,25 +235,6 @@ var geometry = new THREE.SphereGeometry( atmos_radius, 160, 120, phiStart, phiLe
     );
   }
 
-/*
-  function loadVideo( url, cb ){
-    var video_canv = document.createElement('canvas');
-    var video = document.createElement( 'video' );
-    video.loop = true;
-    video.id = 'video';
-    video.src = url;
-    video.crossOrigin = "Anonymous";
-    video.autoplay = true;
-    video.load(); // must call after setting/changing source
-    video.playbackRate = 0.5;
-    video.addEventListener("loadedmetadata", function () {
-      cb( video )
-    })
-    video.addEventListener('loadeddata', function() {
-      video.play()
-    })
-  }
-*/
 
   var wmsUrl = 'http://wms-wetoffice.rhcloud.com/neo?';
   var wmsMenu;
@@ -478,13 +459,14 @@ function game_transition(){
   </script>
 </head>
 <body>
+  <!--
   <div class="menu">
     <div>
-      <!-- Search <input type="text"> -->
       <br>
       <ul  id="list"></ul>
     </div>
   </div>
+  -->
   <div id="clue" style="position:absolute;visibility:hidden">
     <h1>M</h1>
     <h1>E</h1>
@@ -494,6 +476,7 @@ function game_transition(){
   <div class="page">
     <div class="location" id="location"></div>
     <div class="info" id="infomsg">
+      Interception  ::: ->
       <button id='moveBtn' class='btn btn-default' type='button'>Play</button>
       <div id="dims"></div>
     </div>
@@ -509,9 +492,8 @@ function game_transition(){
         game_transition();
       }, 3000);
 
-      //dest_x = -Math.PI/2;
     });
-    buildMenu();
+    //buildMenu();
     $.getJSON("menu_glofas.json", function(data){
       wmsUrl = data["server"] + '?';
       wmsMenu = data["menu"];
