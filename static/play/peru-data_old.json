@@ -1,0 +1,90 @@
+location {
+	coordinates : {
+		latitude : 0,
+		longitude: 0
+	},
+	
+	questions : {
+		question : {
+			section : "",
+			tittle: "The scenario",
+			text: "There is torrential rain in Peru’s southern Andean Cusco region where 16,000 people live. The area has seen constant rainfall for the last 15 days, but it has been particularly heavy for the last few days. The Quillabamba River is dangerously high and has the potential to burst its banks. This region is remote, and has many steep sided slopes. Access is limited. The level of development islow. There is little electricity if any."
+			hasAnswer: false,			
+		},
+		
+		question : {
+			section: "A",
+			tittle: "Question 1",
+			text: "You need to decide on a suitable location for a flood shelter. This is going to be quickly built in the flood alert area as a place where people can evacuate to. Look at the map below and decide which of the four locations would be most suitable:"
+			hasImage: true,
+			imageUrl: "q1.jpg",
+			answers {
+				answer : {
+					text: "A",
+					weight: 1,
+					correct: false
+				},
+				answer : {
+					text: "B",
+					weight: 1,
+					correct: false
+				},
+				answer : {
+					text: "C",
+					weight: 4,
+					correct: true
+				},
+				answer : {
+					text: "D",
+					weight: 5,
+					correct: true
+				}				
+			}
+		},		
+		
+		question : {
+			section: "A",
+			tittle: "Question 2",
+			text: "You now need to make a call – who should you share this flood alert warning with? Choose up to three."
+			hasImage: true,
+			imageUrl: "q2.jpg",
+			answers {
+				answer : {
+					text: "The National Government",
+					weight: 1,
+					correct: false
+				},
+				answer : {
+					text: "Local businesses",
+					weight: 1,
+					correct: false
+				},
+				answer : {
+					text: "Neighbouring countries",
+					weight: 4,
+					correct: true
+				},
+				answer : {
+					text: "Other NGOs in the area",
+					weight: 5,
+					correct: true
+				},
+				answer : {
+					text: "The local media",
+					weight: 5,
+					correct: true
+				},
+				answer : {
+					text: "The emergency services",
+					weight: 5,
+					correct: true
+				},
+				answer : {
+					text: "The United Nations",
+					weight: 5,
+					correct: true
+				}				
+			}
+		}
+	}
+}
