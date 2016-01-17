@@ -300,7 +300,7 @@
         {
           "section": "Section D",
           "index": 9,
-          "content": "9.	You are having a meeting with the Government official in charge of flooding. What advice would you give them to help them prepare for future flood events. Choose up to three",
+          "content": "You are having a meeting with the Government official in charge of flooding. What advice would you give them to help them prepare for future flood events. Choose up to three",
           "maxAnswers": 3,
           "answers": [
             {
@@ -386,8 +386,7 @@
       "sections": [
         {
           "name": "The Scenario",
-          "content": "There is torrential rain in Peru’s southern Andean Cusco region where 16,000 people live. The area has seen constant rainfall for the last 15 days, but it has been particularly heavy for the last few days. The Quillabamba River is dangerously high and has the potential to burst its banks.
-          \n\n This region is remote, and has many steep sided slopes. Access is limited. The level of development is low. There is little electricity if any."
+          "content": "There is torrential rain in Peru’s southern Andean Cusco region where 16,000 people live. The area has seen constant rainfall for the last 15 days, but it has been particularly heavy for the last few days. The Quillabamba River is dangerously high and has the potential to burst its banks.\n\n This region is remote, and has many steep sided slopes. Access is limited. The level of development is low. There is little electricity if any."
         },
         {
           "name": "Section A",
