@@ -2,25 +2,71 @@
   "points": [ { "IWillFill": "ThisInLater" } ],
   "questions": [
     {
-       "stuffForQuestion": 1
+      "section": "Section A",
+      "index": 1,
+      "content": "You need to decide on a suitable location for a flood shelter. This is going to be quickly built in the flood alert area as a place where people can evacuate to. Look at the map below and decide which of the four locations would be most suitable:",
+      "maxAnswers": 1,
+      "answers": [
+        {
+          "content": "A",
+          "weight": 0
+        },
+        {
+          "content": "B",
+          "weight": 0
+        },
+        {"content": "C",
+          "weight": 1
+        },
+        {"content": "D",
+          "weight": 0
+        }
+      ],
+      "imageSrc": "URL q1.jpg"
     },
     {
-       "stuffForQuestion": 2
-    },
+      "index": 2,
+      "content": "You now need to make a call – who should you share this flood alert warning with? Choose up to three.",
+      "maxAnswers": 3,
+      "answers": [
+        {
+          "content": "The National Government",
+          "weight": 0
+        },
+        {
+          "content": "Local businesses",
+          "weight": 0
+        },
+        {"content": "Neighbouring countries",
+          "weight": 0
+        },
+        {"content": "Other NGOs in the area",
+          "weight": 0
+        },
+        {"content": "The local media",
+          "weight": 0
+          }   ,
+          {"content": "The emergency services",
+            "weight": 0
+            }   ,
+            {"content": "The United Nations",
+              "weight": 0
+            }
+          ],
+          "imageSrc": "URL q2.jpg"
+        },
     {
        "point": [ { "IWillFill": "ThisInLater" } ],
-       "section": "B",
+       "section": "Section B",
        "index": 3,
        "content": "You have now arrived in the flood alert location and need to start onin your goal of preserving the lives of the people who are now vulnerable to this flood event. Before you get into the community you have some more decisions to make about how you can best help these people",
-       "isWeighted": true,
        "maxAnswers": 4, // put 1 if it's not a multiple answer
        "answers": [
           {
 	     "content": "Evacuate to a flood shelter",
 	     // you would put a "weight": 1 or whatever if it had a weight, don't think they added them yet, but we will fill the contents later, default them to 1, or a "correct": true/false value in case it wasn't weighted
 	     // possible stuff:
-             "weight": -1,
-	     "correct": false
+             "weight": -1
 	  },
 	  {
 	     "content": "Evacuate to the nearest town or city - maybe where you have relatives"
@@ -32,5 +78,28 @@
        ],
        "imageSrc": "whatever the url is"
     }
+  ],
+  "sections": [
+     {
+      "name": "The Scenario",
+	    "content": "There is torrential rain in Peru’s southern Andean Cusco region where 16,000 people live. The area has seen constant rainfall for the last 15 days, but it has been particularly heavy for the last few days. The Quillabamba River is dangerously high and has the potential to burst its banks.
+\n\n This region is remote, and has many steep sided slopes. Access is limited. The level of development is low. There is little electricity if any."
+     },
+     {
+       "name": "Section A",
+       "content": "Before you leave for the flood alert area you have a few things to do:"
+     },
+     {
+       "name": "Section B",
+       "content": "You have now arrived in the flood alert location and need to start on your goal of preserving the lives of the people who are now vulnerable to this flood event. Before you get into the community you have some more decisions to make about how you can best help these people:"
+     },
+     {
+       "name": "Section C",
+       "content": "You are now on the streets and there is panic. The flood waters are rising."
+     },
+     {
+       "name": "Section D",
+       "content": "The flood event has now passed."
+     },
   ]
 }
