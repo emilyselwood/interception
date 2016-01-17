@@ -3,22 +3,18 @@ canvas {
   top: 0;
   left: 0;
 }
-
 body {
   overflow: hidden;
 }
-
 p, h1 {
   margin: 0 0;
 }
-
 div.popup {
   position: absolute;
   width: 500px;
   height: 500px;
   transform: scale( 0, 0 );
-  -webkit-transform: scale( 0, 0 ); 
-
+  -webkit-transform: scale( 0, 0 );
   font-family: Verdana;
 }
 div.popup.active {
@@ -36,7 +32,6 @@ div.popup > .section {
   height: 50px;
   padding: 10px 20px 10px 20px;
   box-shadow: 0 0 6px #888;
-
   font-size: 20px;
 }
 div.popup > .section > p {
