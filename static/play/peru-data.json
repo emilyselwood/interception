@@ -76,7 +76,7 @@
           "point": {"x":196,"y":63},
           "section": "Section B",
           "index": 3,
-          "content": "  and need to start helping the local people who are vulnerable to this flood event. Before you go into the community you have some decisions to make about how you can best help",
+          "content": "Before you go into the community you have some decisions to make. Which of the following measures are suitable for people to do in this flood alert area? Choose up to four.",
           "maxAnswers": 4,
           "answers": [
             {
@@ -102,18 +102,6 @@
             {
               "content": "Ensure that you have an emergency flood kit",
               "weight": 1
-            },
-            {
-              "content": "Call the police to let them know about the flood event",
-              "weight": -1
-            },
-            {
-              "content": "Prepare sand bags",
-              "weight": -1
-            },
-            {
-              "content": "Empty the fridge and freezer",
-              "weight": -1
             }
           ],
           "imageSrc": "https://dl.dropboxusercontent.com/u/3789247/interception/q3.png"
@@ -142,36 +130,12 @@
               "weight": -1
             },
             {
-              "content": "First-aid kit",
-              "weight": -1
-            },
-            {
-              "content": "Water purification tablets",
-              "weight": -1
-            },
-            {
-              "content": "Wind up radio",
-              "weight": -1
-            },
-            {
               "content": "Blankets",
               "weight": 1
             },
             {
               "content": "Spare clothing",
               "weight": 1
-            },
-            {
-              "content": "Waterproof clothing",
-              "weight": -1
-            },
-            {
-              "content": "Medication",
-              "weight": -1
-            },
-            {
-              "content": "Toothbrush",
-              "weight": -1
             },
             {
               "content": "Sources of fuel",
@@ -210,10 +174,6 @@
             {
               "content": "Ensure that the local school is set up as a place for people to evacuate to",
               "weight": 0
-            },
-            {
-              "content": "Set up a telephone hotline for people to call if they are unsure what to do",
-              "weight": 0
             }
           ],
           "imageSrc": "https://dl.dropboxusercontent.com/u/3789247/interception/q5.png"
@@ -244,10 +204,6 @@
             {
               "content": "To put up posters with safety images in the local area",
               "weight": 1
-            },
-            {
-              "content": "To tweet the message or use some other form of social media",
-              "weight": -1
             }
           ],
           "imageSrc": "https://dl.dropboxusercontent.com/u/3789247/interception/q6.png"
@@ -277,10 +233,6 @@
             },
             {
               "content": "For people to take their pets upstairs",
-              "weight": -1
-            },
-            {
-              "content": "To take as many things as they can with them when they evacuate",
               "weight": -1
             }
           ],
@@ -332,10 +284,6 @@
               "weight": 1
             },
             {
-              "content": "To rebuild all houses on stilts (raised up off the ground)",
-              "weight": -1
-            },
-            {
               "content": "To broadcast flood education through social media ",
               "weight": -1
             },
@@ -346,14 +294,6 @@
             {
               "content": "To organise community education events e.g. puppet shows to teach local people about flooding",
               "weight": 1
-            },
-            {
-              "content": "To build levees (build up the banks of the river",
-              "weight": -1
-            },
-            {
-              "content": "To rebuild the settlement further upstream",
-              "weight": -1
             }
           ],
           "imageSrc": "https://dl.dropboxusercontent.com/u/3789247/interception/q9.png"
@@ -388,18 +328,6 @@
             {
               "content": "Discharge levels",
               "weight": 1
-            },
-            {
-              "content": "Employment levels",
-              "weight": -1
-            },
-            {
-              "content": "Doctor to patient ratio",
-              "weight": -1
-            },
-            {
-              "content": "Birth rates",
-              "weight": -1
             }
           ],
           "imageSrc": "https://dl.dropboxusercontent.com/u/3789247/interception/q10.png"
@@ -416,7 +344,7 @@
         },
         {
           "name": "Section B",
-          "content": "You have now arrived in the flood alert location"
+          "content": "You have arrived in the flood alert location:"
         },
         {
           "name": "Section C",
