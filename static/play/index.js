@@ -23,20 +23,23 @@ data.loaded = false;
 
 function setupGradients(){
     
-    gradients.questionDone = ctx.createRadialGradient( -3 * scale, -3 * scale, 0, 0, scale * 6 );
+    gradients.questionDone = ctx.createRadialGradient( -3 * scale, -3 * scale, 0, 0, 0, scale * 6 );
     gradients.questionDone.addColorStop( 0, '#4b5' );
     gradients.questionDone.addColorStop( .9, '#394' );
-    gradients.questionDone.addColorStop( 1, '#121' );
+    gradients.questionDone.addColorStop( .999999, '#121' );
+    gradients.questionDone.addColorStop( 1, 'rgba(0,0,0,0)' );
 
-    gradients.questionNotDone = ctx.createRadialGradient( -3 * scale, -3 * scale, 0, 0, scale * 6 );
+    gradients.questionNotDone = ctx.createRadialGradient( -3 * scale, -3 * scale, 0, 0, 0, scale * 6 );
     gradients.questionNotDone.addColorStop( 0, '#696' );
     gradients.questionNotDone.addColorStop( .9, '#575' );
-    gradients.questionNotDone.addColorStop( 1, '#222' );
+    gradients.questionNotDone.addColorStop( .999999, '#222' );
+    gradients.questionNotDone.addColorStop( 1, 'rgba(0,0,0,0)' );
 
-    gradients.player = ctx.createRadialGradient( -5 * scale, -5 * scale, 0, 0, scale * 10 );
+    gradients.player = ctx.createRadialGradient( -5 * scale, -5 * scale, 0, 0, 0, scale * 10 );
     gradients.player.addColorStop( 0, '#4ac' );
     gradients.player.addColorStop( .9, '#368' );
-    gradients.player.addColorStop( 1, '#134' );
+    gradients.player.addColorStop( .99999, '#134' );
+    gradients.player.addColorStop( 1, 'rgba(0,0,0,0)' );
 }
 function displayLoading( dots ){
 
@@ -92,12 +95,12 @@ function fillBackground(){
 
     anim();
     
-   // var xhr = new XMLHttpRequest;
-   // xhr.open( 'GET', data.location + '-data.json' );
-   // xhr.onload = function(){
+   var xhr = new XMLHttpRequest;
+   xhr.open( 'GET', data.location + '-data.json' );
+   xhr.onload = function(){
         
         data.loaded = true;
-        var object = JSON.parse( prompt() );//xhr.responseText );
+        var object = JSON.parse( xhr.responseText );
         data.questions = object.questions;
         data.points = object.points;
 	data.sections = object.sections;
@@ -106,11 +109,15 @@ function fillBackground(){
 
         player.x = data.questions[ 0 ].point.x * scale + cx;
         player.y = data.questions[ 0 ].point.y * scale + cy;
-        player.n = 0;
+        player.n = -1;
 	player.moving = true;
 
+	incrementLevel();
+
         fillBackground();
-  //  }
+  }
+  
+  setupGradients();
 
 })();
 
@@ -121,7 +128,7 @@ function incrementLevel(){
     if( player.n > data.questions.length )
         return finishModal();
 
-    player.end = data.questions[ player.n ];
+    player.end = data.questions[ player.n ].point;
     player.dx = player.end.x - player.x;
     player.dy = player.end.y - player.y;
 
@@ -134,24 +141,28 @@ function finishModal(){
 }
 function drawQuestion( question ){
 
-    var x = question.point.x,
-	y = question.point.y,
+    var x = question.point.x * scale + cx,
+	y = question.point.y * scale + cy,
 	done = question.done;
 
     ctx.fillStyle = done ? gradients.questionDone : gradients.questionNotDone;
     ctx.translate( x, y );
-    ctx.fillRect( -scale * 3, -scale * 3, scale * 6, scale * 6 );
+    ctx.beginPath();
+    ctx.arc( 0, 0, scale * 6, 0, Math.PI * 2 );
+    ctx.fill();
     ctx.translate( -x, -y );
 
 }
 function drawPlayer( armonic ){
 
-    var x = player.x + player.dx * armonic,
-        y = player.y + player.dy * armonic;
+    var x = ( player.x + player.dx * armonic ) * scale + cx,
+        y = ( player.y + player.dy * armonic ) * scale + cy;
 
     ctx.fillStyle = gradients.player;
     ctx.translate( x, y );
-    ctx.fillRect( -scale * 5, -scale * 5, scale * 10, scale * 10 );
+    ctx.beginPath();
+    ctx.arc( 0, 0, scale * 10, 0, Math.PI * 2 );
+    ctx.fill();
     ctx.translate( -x, -y );
     
 }
@@ -208,14 +219,14 @@ function displayQuestion( question ){
 
 	optionsEl.appendChild( optionEl );
 
-	clickable.addEventListener( 'click', getClick( i ) );
+	clickable.addEventListener( 'click', new Function( getClick( i ) ) );
         
 	currentQuestion.answers.push( { marked: false, weight: answer.weight } );
     }
 
     var sendEl = document.createElement( 'button' );
     sendEl.className = 'sendBtn';
-    sendEl.textContent = "Send";
+    sendEl.textContent = "continue";
     sendEl.addEventListener( 'click', (function( element ){
        
         return function(){
@@ -293,10 +304,12 @@ function anim(){
 	    drawQuestion( data.questions[ i ] );
         
         var proportion = tick / 60;
-	drawPlayer( -Math.cos( tick * Math.PI ) / 2 + .5 );
+	drawPlayer( -Math.cos( proportion * Math.PI ) / 2 + .5 );
 
 	if( proportion >= 1 ){ status += '2';
 	
+	    player.x = player.end.x;
+	    player.y = player.end.y;
 	    player.moving = false;
 	    tick = 0;
 
