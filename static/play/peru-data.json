@@ -1,0 +1,408 @@
+{
+  "points": [ { "IWillFill": "ThisInLater" } ],
+  "questions": [
+    {
+      "index": "start",
+      "content": "Sample Question 1?",
+      "maxAnswers": 1,
+      "answers": [
+        {
+          "content": "A",
+          "weight": 0
+        }
+      ]
+    },
+    {
+      "section": "Section A",
+      "index": 1,
+      "content": "You need to decide on a suitable location for a flood shelter. This is going to be quickly built in the flood alert area as a place where people can evacuate to. Look at the map below and decide which of the four locations would be most suitable:",
+      "maxAnswers": 1,
+      "answers": [
+        {
+          "content": "A",
+          "weight": 0
+        },
+        {
+          "content": "B",
+          "weight": 0
+        },
+        {"content": "C",
+          "weight": 1
+        },
+        {"content": "D",
+          "weight": 0
+        }
+      ],
+      "imageSrc": "https://dl.dropboxusercontent.com/u/3789247/interception/q1.png"
+    },
+    {
+      "index": 2,
+      "content": "You now need to make a call – who should you share this flood alert warning with? Choose up to three.",
+      "maxAnswers": 3,
+      "answers": [
+        {
+          "content": "The National Government",
+          "weight": 0
+        },
+        {
+          "content": "Local businesses",
+          "weight": 0
+        },
+        {"content": "Neighbouring countries",
+          "weight": 0
+        },
+        {"content": "Other NGOs in the area",
+          "weight": 0
+        },
+        {"content": "The local media",
+          "weight": 0
+          }   ,
+          {"content": "The emergency services",
+            "weight": 0
+            }   ,
+            {"content": "The United Nations",
+              "weight": 0
+            }
+          ],
+          "imageSrc": "https://dl.dropboxusercontent.com/u/3789247/interception/q2.png"
+        },
+        {
+          "point": [ { "IWillFill": "ThisInLater" } ],
+          "section": "Section B",
+          "index": 3,
+          "content": "You need to decide what messages you want to share with the local people. Which of these measuresthings are suitable for the population to do in this flood alert area? Choose up to four.",
+          "maxAnswers": 4,
+          "answers": [
+            {
+              "content": "Evacuate to a flood shelter",
+              "weight": 0
+            },
+            {
+              "content": "Evacuate to the nearest town or city - maybe where you have relatives",
+              "weight": 0
+            },
+            {
+              "content": "Turn off all electrical sockets",
+              "weight": 0
+            },
+            {
+              "content": "Know where you are going and how you will get there",
+              "weight": 0
+            },
+            {
+              "content": "Ensure that you have adequate insurance",
+              "weight": 0
+            },
+            {
+              "content": "Ensure that you have an emergency flood kit",
+              "weight": 0
+            },
+            {
+              "content": "Call the police to let them know about the flood event",
+              "weight": 0
+            },
+            {
+              "content": "Prepare sand bags",
+              "weight": 0
+            },
+            {
+              "content": "Empty the fridge and freezer",
+              "weight": 0
+            }
+          ],
+          "imageSrc": "https://dl.dropboxusercontent.com/u/3789247/interception/q3.png"
+        },
+        {
+          "index": 4,
+          "content": "You need to advise people on what to put into an emergency flood kit. What would you tell people in this community to include. Include up to six",
+          "maxAnswers": 6,
+          "answers": [
+            {
+              "content": "Torch",
+              "weight": 0
+            },
+            {
+              "content": "Mobile phone charger",
+              "weight": 0
+            },
+            {
+              "content": "Non-perishable food",
+              "weight": 0
+            },
+            {
+              "content": "A list of family and friend phone numbers for people who don't live in the area",
+              "weight": 0
+            },
+            {
+              "content": "First-aid kit",
+              "weight": 0
+            },
+            {
+              "content": "Water purification tablets",
+              "weight": 0
+            },
+            {
+              "content": "Wind up radio",
+              "weight": 0
+            },
+            {
+              "content": "Blankets",
+              "weight": 0
+            },
+            {
+              "content": "Spare clothing",
+              "weight": 0
+            },
+            {
+              "content": "Waterproof clothing",
+              "weight": 0
+            },
+            {
+              "content": "Medication",
+              "weight": 0
+            },
+            {
+              "content": "Toothbrush",
+              "weight": 0
+            },
+            {
+              "content": "Sources of fuel",
+              "weight": 0
+            }
+          ],
+          "imageSrc": "https://dl.dropboxusercontent.com/u/3789247/interception/q4.png"
+        },
+        {
+          "index": 5,
+          "content": "You need to provide resources which will be available for the whole local community. Which of the following are most suitable for this community? Choose up to three.",
+          "maxAnswers": 3,
+          "answers": [
+            {
+              "content": "Water purification tablets",
+              "weight": 0
+            },
+            {
+              "content": "Empty water containers for people to fill before the water supply goes off",
+              "weight": 0
+            },
+            {
+              "content": "Portable toilets",
+              "weight": 0
+            },
+            {
+              "content": "Bags to store crops in",
+              "weight": 0
+            },
+            {
+              "content": "Tents",
+              "weight": 0
+            },
+            {
+              "content": "Ensure that the local school is set up as a place for people to evacuate to",
+              "weight": 0
+            },
+            {
+              "content": "Set up a telephone hotline for people to call if they are unsure what to do",
+              "weight": 0
+            }
+          ],
+          "imageSrc": "https://dl.dropboxusercontent.com/u/3789247/interception/q5.png"
+        },
+        {
+          "index": 6,
+          "content": "You then hold a meeting with your Red Cross Team who will disseminate this information to the local people. What is the best way for them to do this? Choose up to three",
+          "maxAnswers": 3,
+          "answers": [
+            {
+              "content": "To knock on all doors in the local area and tell people to evacuate",
+              "weight": 0
+            },
+            {
+              "content": "To hold an education meeting where you share the information",
+              "weight": 0
+            },
+            {
+              "content": "To deliver leaflets through all the doors",
+              "weight": 0
+            },
+            {
+              "content": "To contact the local radio station to broadcast the information",
+              "weight": 0
+            },
+            {
+              "content": "To put up posters in the local area",
+              "weight": 0
+            },
+            {
+              "content": "To tweet the message or use some other form of social media",
+              "weight": 0
+            }
+          ],
+          "imageSrc": "https://dl.dropboxusercontent.com/u/3789247/interception/q6.png"
+        },
+        {
+          "section": "Section C",
+          "index": 7,
+          "content": "People are asking you about saving their possessions and belongings. What would you advise? Choose up to three",
+          "maxAnswers": 3,
+          "answers": [
+            {
+              "content": "For people to take their livestock to higher ground",
+              "weight": 0
+            },
+            {
+              "content": "For people to move their photographs and electrical goods upstairs",
+              "weight": 0
+            },
+            {
+              "content": "For people to take their weapons with them for protection",
+              "weight": 0
+            },
+            {
+              "content": "For people to take their pets upstairs",
+              "weight": 0
+            },
+            {
+              "content": "To take as many things as they can with them when they evacuate",
+              "weight": 0
+            }
+          ],
+          "imageSrc": "https://dl.dropboxusercontent.com/u/3789247/interception/q7.png"
+        },
+        {
+          "index": 8,
+          "content": "You want to ensure that there is no one in serious danger – how do you go about doing this? Choose one",
+          "maxAnswers": 1,
+          "answers": [
+            {
+              "content": "Get into a small boat and row around the community to see if anyone needs to be rescued and taken to higher ground",
+              "weight": 0
+            },
+            {
+              "content": "Get the emergency services to take you around in a small power boat to look in individual houses for people who are stranded",
+              "weight": 0
+            },
+            {
+              "content": "Tweet for people to contact you if they are in danger",
+              "weight": 0
+            },
+            {
+              "content": "Shout with a loud speaker",
+              "weight": 0
+            },
+            {
+              "content": "Check with people in rescue shelters if they know anyone stranded in the floods",
+              "weight": 0
+            }
+          ],
+          "imageSrc": "https://dl.dropboxusercontent.com/u/3789247/interception/q8.png"
+        },
+        {
+          "section": "Section D",
+          "index": 9,
+          "content": "You are having a meeting with the Government official in charge of flooding. What advice would you give them to help them prepare for future flood events. Choose up to three",
+          "maxAnswers": 3,
+          "answers": [
+            {
+              "content": "To ensure that children in all schools have education on what to do in a flood",
+              "weight": 0
+            },
+            {
+              "content": "To ensure that the emergency services have a clear plan of action",
+              "weight": 0
+            },
+            {
+              "content": "To rebuild all houses on stilts (raised up off the ground)",
+              "weight": 0
+            },
+            {
+              "content": "To broadcast flood education through social media ",
+              "weight": 0
+            },
+            {
+              "content": "To plant more trees",
+              "weight": 0
+            },
+            {
+              "content": "To organise community education events e.g. puppet shows to teach local people about flooding",
+              "weight": 0
+            },
+            {
+              "content": "To build levees (build up the banks of the river",
+              "weight": 0
+            },
+            {
+              "content": "To rebuild the settlement further upstream",
+              "weight": 0
+            }
+          ],
+          "imageSrc": "https://dl.dropboxusercontent.com/u/3789247/interception/q9.png"
+        },
+        {
+          "index": 10,
+          "content": "In your meeting, the government official asks you if there is any additional data that would help their country to predict and prepare for a flood event. What would you advise? Choose up to three",
+          "maxAnswers": 3,
+          "answers": [
+            {
+              "content": "Primary Education rates",
+              "weight": 0
+            },
+            {
+              "content": "Probabilistic weather forecasts and decision making mechanisms",
+              "weight": 0
+            },
+            {
+              "content": "Land use mapping  with ongoing monitoring",
+              "weight": 0
+            },
+            {
+              "content": "Evaporation rates",
+              "weight": 0
+            },
+            {
+              "content": "Geology",
+              "weight": 0
+            },
+            {
+              "content": "Discharge levels",
+              "weight": 0
+            },
+            {
+              "content": "Employment levels",
+              "weight": 0
+            },
+            {
+              "content": "Doctor to patient ratio",
+              "weight": 0
+            },
+            {
+              "content": "Birth rates",
+              "weight": 0
+            }
+          ],
+          "imageSrc": "https://dl.dropboxusercontent.com/u/3789247/interception/q10.png"
+        }
+      ],
+      "sections": [
+        {
+          "name": "The Scenario",
+          "content": "There is torrential rain in Peru's southern Andean Cusco region where 16,000 people live. The area has seen constant rainfall for the last 15 days, but it has been particularly heavy for the last few days. The Quillabamba River is dangerously high and has the potential to burst its banks.\n\n This region is remote, and has many steep sided slopes. Access is limited. The level of development is low. There is little electricity if any."
+        },
+        {
+          "name": "Section A",
+          "content": "Before you leave for the flood alert area you have a few things to do:"
+        },
+        {
+          "name": "Section B",
+          "content": "You have now arrived in the flood alert location and need to start on your goal of preserving the lives of the people who are now vulnerable to this flood event. Before you get into the community you have some more decisions to make about how you can best help these people:"
+        },
+        {
+          "name": "Section C",
+          "content": "You are now on the streets and there is panic. The flood waters are rising."
+        },
+        {
+          "name": "Section D",
+          "content": "The flood event has now passed."
+        }
+      ]
+    }

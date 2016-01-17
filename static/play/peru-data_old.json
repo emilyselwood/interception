@@ -1,0 +1,40 @@
+{
+  "points": [ { "IWillFill": "ThisInLater" } ],
+  "section": "A",
+  "index": ?,
+  "content":
+  "questions": [
+    {
+       "stuffForQuestion": "You need to decide on a suitable location for a flood shelter. This is going to be quickly built in the flood alert area as a place where people can evacuate to.
+ Look at the map below and decide which of the four locations would be most suitable:"
+    },
+    {
+       "stuffForQuestion": "You now need to make a call – who should you share this flood alert warning with? Choose up to three."
+    },
+    {
+       "point": [ { "IWillFill": "ThisInLater" } ],
+       "section": "B",
+       "index": 3,
+       "content": "You have now arrived in the flood alert location and need to start onin your goal of preserving the lives of the people who are now vulnerable to this flood event. Before you get into the community you have some more decisions to make about how you can best help these people",
+       "isWeighted": true,
+       "maxAnswers": 4, // put 1 if it's not a multiple answer
+       "answers": [
+          {
+	     "content": "Evacuate to a flood shelter",
+	     // you would put a "weight": 1 or whatever if it had a weight, don't think they added them yet, but we will fill the contents later, default them to 1, or a "correct": true/false value in case it wasn't weighted
+	     // possible stuff:
+             "weight": -1,
+	     "correct": false
+	  },
+	  {
+	     "content": "Evacuate to the nearest town or city - maybe where you have relatives"
+	  },
+	  {
+	     "content": "Turn off all electrical sockets"
+	  },
+	  ........ put other stuff in
+       ],
+       "imageSrc": "whatever the url is"
+    }
+  ]
+}
