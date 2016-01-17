@@ -34,8 +34,14 @@ app.logger.setLevel(logging.DEBUG)
 
 
 @app.route('/')
+@app.route('/index.html')
 def index():
     return render_template('index.html')
+
+@app.route('/play/')
+@app.route('/play/index.html')
+def play_index():
+    return render_template('play/index.html')
 
 @app.route('/fetchTop10', methods=['GET'])
 def scoreboard():
