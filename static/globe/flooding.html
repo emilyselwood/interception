@@ -202,6 +202,7 @@ var geometry = new THREE.SphereGeometry( atmos_radius, 160, 120, phiStart, phiLe
       canv.height = this.height;
       ctx.drawImage(this, 0, 0);
       cb(canv.toDataURL(), opts);
+      loadWmsImage( "http://wms-wetoffice.rhcloud.com/glofas?", params_reporting_points, wmsLoader, {sphere: outer_sphere, opacity:0.9, geometry: geometry});
     }
     tmpImage.crossOrigin = 'anonymous';
     tmpImage.src =  url;
@@ -452,7 +453,7 @@ function game_transition(){
     $('#location').css('visibility','hidden');
     dest_z = 90;
     setTimeout(function() {
-      window.location.href = "/static/play/index.html";      
+      window.location.href = "/static/play/index.html";
     }, 1000)
   }, 1000);
 }
@@ -508,7 +509,7 @@ function game_transition(){
       load_sequence();
     });
     document.getElementById('webgl').appendChild(renderer.domElement);
-    loadWmsImage( "http://wms-wetoffice.rhcloud.com/glofas?", params_reporting_points, wmsLoader, {sphere: outer_sphere, opacity:0.9, geometry: geometry});
+    //loadWmsImage( "http://wms-wetoffice.rhcloud.com/glofas?", params_reporting_points, wmsLoader, {sphere: outer_sphere, opacity:0.9, geometry: geometry});
     render();
 
     </script>
