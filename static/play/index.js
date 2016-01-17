@@ -8,6 +8,7 @@ var canvas = document.getElementById( 'c' ),
     player = {},
     tick = 0,
     scale = 1,
+    xhr = new XMLHttpRequest(),
     gradients = {},
     currentQuestion = {},
     bgCanvas = document.createElement( 'canvas' ),
@@ -76,25 +77,9 @@ function fillBackground(){
 (function init(){
     anim();
 
-   var xhr = new XMLHttpRequest;
    xhr.open( 'GET', data.location + '-data.json' );
-   xhr.onload = function(){
-
-        data.loaded = true;
-        var object = JSON.parse( xhr.responseText );
-        data.questions = object.questions;
-        data.points = object.points;
-	data.sections = object.sections;
-	data.score = 0;
-        player.x = data.questions[ 0 ].point.x * scale + cx;
-        player.y = data.questions[ 0 ].point.y * scale + cy;
-        player.n = -1;
-	player.moving = true;
-	incrementLevel();
-        fillBackground();
-  }
-
-  setupGradients();
+   xhr.send();
+   setupGradients();
 })();
 function incrementLevel(){
 
@@ -232,10 +217,24 @@ function anim(){
         window.requestAnimationFrame( anim );
 
     ++tick;
-    var status = '0';
+    if( xhr.responseText.length > 10 && !data.loaded ){
 
+        data.loaded = true;
+        var object = JSON.parse( xhr.responseText );
+        data.questions = object.questions;
+        data.points = object.points;
+        data.sections = object.sections;
+        data.score = 0;
+        player.x = data.questions[ 0 ].point.x * scale + cx;
+        player.y = data.questions[ 0 ].point.y * scale + cy;
+        player.n = -1;
+        player.moving = true;
+        incrementLevel();
+        fillBackground();
 
-    if( data.loaded  ){ status += '1';
+    }
+
+    if( data.loaded  ){
         ctx.fillStyle = '#222';
 	ctx.fillRect( 0, 0, w, h );
         ctx.drawImage( bgCanvas, 0, 0 );
@@ -254,5 +253,4 @@ function anim(){
 	    displayQuestion( data.questions[ player.n ] );
 	}
     } else displayLoading( ( ( tick / 10 ) |0 ) % 4 );
-    console.log( status );
 }
