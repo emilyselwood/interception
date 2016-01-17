@@ -76,7 +76,7 @@
           "point": {"x":196,"y":63},
           "section": "Section B",
           "index": 3,
-          "content": "You need to decide what messages you want to share with the local people. Which of these measuresthings are suitable for the population to do in this flood alert area? Choose up to four.",
+          "content": "Before you go into the community you have some decisions to make. Which of the following measures are suitable for people to do in this flood alert area? Choose up to four.",
           "maxAnswers": 4,
           "answers": [
             {
@@ -415,7 +415,7 @@
         },
         {
           "name": "Section B",
-          "content": "You have now arrived in the flood alert location and need to start on your goal of preserving the lives of the people who are now vulnerable to this flood event. Before you get into the community you have some more decisions to make about how you can best help these people:"
+          "content": "You have arrived in the flood alert location and need to start helping the local people who are vulnerable to this flood event:"
         },
         {
           "name": "Section C",
