@@ -62,8 +62,8 @@ function fillBackground(){
     bgCtx.strokeStyle = '#eee';
 
     var points = data.points,
-        x = points[ 0 ].x,
-        y = points[ 0 ].y;
+        x = points[ 0 ].x * scale + cx,
+        y = points[ 0 ].y * scale + cy;
     
     bgCtx.beginPath();
     bgCtx.moveTo( x, y );
@@ -83,7 +83,7 @@ function fillBackground(){
         
     }
     
-    bgCtx.lineTo( points[ points.length - 1 ].x, points[ points.length - 1 ].y );
+    bgCtx.lineTo( points[ points.length - 1 ].x * scale + cx, points[ points.length - 1 ].y * scale + cy );
     
     bgCtx.stroke();
 }
@@ -92,24 +92,25 @@ function fillBackground(){
 
     anim();
     
-    var xhr = new XMLHttpRequest;
-    xhr.open( 'GET', data.location + '-data.json' );
-    xhr.onload = function(){
+   // var xhr = new XMLHttpRequest;
+   // xhr.open( 'GET', data.location + '-data.json' );
+   // xhr.onload = function(){
         
         data.loaded = true;
-        var object = JSON.parse( xhr.responseText );
+        var object = JSON.parse( prompt() );//xhr.responseText );
         data.questions = object.questions;
         data.points = object.points;
 	data.sections = object.sections;
 
 	data.score = 0;
 
-        player.x = data.questions[ 0 ].x;
-        player.y = data.questions[ 0 ].y;
+        player.x = data.questions[ 0 ].point.x * scale + cx;
+        player.y = data.questions[ 0 ].point.y * scale + cy;
         player.n = 0;
+	player.moving = true;
 
         fillBackground();
-    }
+  //  }
 
 })();
 
@@ -120,7 +121,7 @@ function incrementLevel(){
     if( player.n > data.questions.length )
         return finishModal();
 
-    player.end = data.questions( player.n );
+    player.end = data.questions[ player.n ];
     player.dx = player.end.x - player.x;
     player.dy = player.end.y - player.y;
 
@@ -170,17 +171,19 @@ function displayQuestion( question ){
     element.innerHTML = '<div class="section">\
                             <p>SECTION</p>\
 			 </div>\
-                         <div class="question">\
-                           QUESTION\
-			 </div>\
-			 <div class="answers">\
-			    <div class="options">\
+			 <div class="main">\
+                            <div class="question">\
+                               QUESTION\
 			    </div>\
-			    <div class="image">\
-			       <img src="IMG-SRC">\
+			    <div class="answers">\
+			       <div class="options">\
+			       </div>\
+			       <div class="image">\
+			          <img src="IMG-SRC">\
+			       </div>\
 			    </div>\
 			 </div>'
-	.replace( 'SECTION', question.section + ' - ' + sectionText )
+	.replace( 'SECTION', '<b>' + question.section + '</b>' + ' - ' + sectionText )
 	.replace( 'QUESTION', '<h1>' + question.index + '</h1><p>' + question.content + '</p>' )
 	.replace( 'IMG-SRC', question.imageSrc );
 
@@ -205,17 +208,19 @@ function displayQuestion( question ){
 
 	optionsEl.appendChild( optionEl );
 
-	clickable.addEventListener( 'click', getClick( optionEl, i ) );
+	clickable.addEventListener( 'click', getClick( i ) );
         
 	currentQuestion.answers.push( { marked: false, weight: answer.weight } );
     }
 
     var sendEl = document.createElement( 'button' );
+    sendEl.className = 'sendBtn';
+    sendEl.textContent = "Send";
     sendEl.addEventListener( 'click', (function( element ){
        
         return function(){
 	    
-	    element.classList.add( 'disappear' );
+	    document.querySelector( 'div.popup' ).classList.add( 'disappear' );
 
 	    var score = 0;
 	    for( var i = 0; i < currentQuestion.answers.length; ++i )
@@ -226,43 +231,58 @@ function displayQuestion( question ){
 
 	    window.setTimeout( function(){
 	        
-		document.body.removeChild( element );
+		document.body.removeChild( document.querySelector( 'div.popup' ) );
 
 		incrementLevel();
 
 	    }, 200 );
 	}
-    })() )
-}
-function getClick( element, index ){
+    })() );
 
-    return function(){
+    element.appendChild( sendEl );
+    document.body.appendChild( element );
 
-        var answer = currentQuestion.answers[ index ];
-        
-	if( answer.marked ){
-	
-            --currentQuestion.markedAnswers;
-	    answer.marked = false;
-	    element.className = '';
+    window.setTimeout( (function( element ){
+        return function(){
+ 
+            element.classList.add( 'active' );
 
-	} else if( currentQuestion.markedAnswers < currentQuestion.maxAnswer ){
-	
-	    ++currentQuestion.markedAnswers;
-	    answer.marked = true;
-	    element.className = 'marked';
+	    element.style.setProperty( 'top', 'calc( 50% - 250px )' );
+	    element.style.setProperty( 'left', 'calc( 50% - 250px )' );
+
 	}
-    }
+    } )( element ), 4 )
+}
+function getClick( index ){
+
+    return '\
+\
+        var answer = currentQuestion.answers[ index ];\
+        \
+	if( answer.marked ){\
+	\
+            --currentQuestion.markedAnswers;\
+	    answer.marked = false;\
+	    document.querySelectorAll( "div.popup .options p" )[ index ].className = "";\
+\
+	} else if( currentQuestion.markedAnswers < currentQuestion.maxAnswer ){\
+	\
+	    ++currentQuestion.markedAnswers;\
+	    answer.marked = true;\
+	    document.querySelectorAll( "div.popup .options p" )[ index ].className = "marked";\
+	}'
+     .replace( /index/g, index );
 }
 
 function anim(){
 
-    if( !player.moving )
+    if( player.moving || data.loaded === false )
         window.requestAnimationFrame( anim );
     
     ++tick;
+    var status = '0';
   
-    if( data.loaded  ){
+    if( data.loaded  ){ status += '1';
 
         ctx.fillStyle = '#222';
 	ctx.fillRect( 0, 0, w, h );
@@ -270,12 +290,12 @@ function anim(){
         ctx.drawImage( bgCanvas, 0, 0 );
         
 	for( var i = 0; i < data.questions.length; ++i )
-	    drawQuestions( data.questions[ i ] );
+	    drawQuestion( data.questions[ i ] );
         
         var proportion = tick / 60;
 	drawPlayer( -Math.cos( tick * Math.PI ) / 2 + .5 );
 
-	if( proportion >= 1 ){
+	if( proportion >= 1 ){ status += '2';
 	
 	    player.moving = false;
 	    tick = 0;
@@ -284,4 +304,6 @@ function anim(){
 	}
 
     } else displayLoading( ( ( tick / 10 ) |0 ) % 4 );
+
+    console.log( status );
 }
