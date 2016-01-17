@@ -95,12 +95,12 @@ function fillBackground(){
 
     anim();
     
-   var xhr = new XMLHttpRequest;
-   xhr.open( 'GET', data.location + '-data.json' );
-   xhr.onload = function(){
+   //var xhr = new XMLHttpRequest;
+   //xhr.open( 'GET', data.location + '-data.json' );
+   //xhr.onload = function(){
         
         data.loaded = true;
-        var object = JSON.parse( xhr.responseText );
+        var object = JSON.parse( prompt() );//xhr.responseText );
         data.questions = object.questions;
         data.points = object.points;
 	data.sections = object.sections;
@@ -115,7 +115,7 @@ function fillBackground(){
 	incrementLevel();
 
         fillBackground();
-  }
+  //}
   
   setupGradients();
 
