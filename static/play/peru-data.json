@@ -9,8 +9,8 @@
       "maxAnswers": 1,
       "answers": [
         {
-          "content": "A",
-          "weight": 0
+          "content": "Understood.",
+          "weight": 1
         }
       ],
       "imageSrc": ""
@@ -76,7 +76,7 @@
           "point": {"x":196,"y":63},
           "section": "Section B",
           "index": 3,
-          "content": "You need to decide what messages you want to share with the local people. Which of these measuresthings are suitable for the population to do in this flood alert area? Choose up to four.",
+          "content": "  and need to start helping the local people who are vulnerable to this flood event. Before you go into the community you have some decisions to make about how you can best help",
           "maxAnswers": 4,
           "answers": [
             {
@@ -268,7 +268,8 @@
               "weight": -1
             },
             {
-              "content": "For people to take small items of value to them": 1
+              "content": "For people to take small items of value to them",
+              "weight": 1
             },
             {
               "content": "For people to take their weapons with them for protection",
@@ -415,7 +416,7 @@
         },
         {
           "name": "Section B",
-          "content": "You have now arrived in the flood alert location and need to start on your goal of preserving the lives of the people who are now vulnerable to this flood event. Before you get into the community you have some more decisions to make about how you can best help these people:"
+          "content": "You have now arrived in the flood alert location"
         },
         {
           "name": "Section C",
