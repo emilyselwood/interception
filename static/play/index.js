@@ -95,12 +95,12 @@ function fillBackground(){
 
     anim();
     
-   //var xhr = new XMLHttpRequest;
-   //xhr.open( 'GET', data.location + '-data.json' );
-   //xhr.onload = function(){
+   var xhr = new XMLHttpRequest;
+   xhr.open( 'GET', data.location + '-data.json' );
+   xhr.onload = function(){
         
         data.loaded = true;
-        var object = JSON.parse( prompt() );//xhr.responseText );
+        var object = JSON.parse( xhr.responseText );
         data.questions = object.questions;
         data.points = object.points;
 	data.sections = object.sections;
@@ -115,7 +115,7 @@ function fillBackground(){
 	incrementLevel();
 
         fillBackground();
-  //}
+  }
   
   setupGradients();
 
@@ -171,8 +171,8 @@ function displayQuestion( question ){
 
     var element = document.createElement( 'div' );
     element.className = 'popup';
-    element.style.setProperty( 'top', 'calc( 50% + ' + ( question.point.y * scale ) + 'px )' );
-    element.style.setProperty( 'left', 'calc( 50% + ' + ( question.point.x * scale ) + 'px )' );
+    element.style.setProperty( 'top', 'calc( 50% ' + ( question.point.y < 0 ? '- ' : '+ ' ) + Math.abs( question.point.y * scale ) + 'px )' );
+    element.style.setProperty( 'left', 'calc( 50% ' + ( question.point.x < 0 ? '- ' : '+ ' ) + Math.abs( question.point.x * scale ) + 'px )' );
 
     var sectionText = '';
     for( var i = 0; i < data.sections.length; ++i )
@@ -261,24 +261,24 @@ function displayQuestion( question ){
 	element.style.setProperty( 'top', 'calc( 50% - 250px )' );
 	element.style.setProperty( 'left', 'calc( 50% - 250px )' );
 
-    }, 20 )
+    }, 60 )
 }
 function getClick( index ){
 
-    return '\
-\
-        var answer = currentQuestion.answers[ index ];\
-        \
-	if( answer.marked ){\
-	\
-            --currentQuestion.markedAnswers;\
-	    answer.marked = false;\
-	    document.querySelectorAll( "div.popup .options p" )[ index ].className = "";\
-\
-	} else if( currentQuestion.markedAnswers < currentQuestion.maxAnswer ){\
-	\
-	    ++currentQuestion.markedAnswers;\
-	    answer.marked = true;\
+    return '                                                                                  \
+                                                                                              \
+        var answer = currentQuestion.answers[ index ];                                        \
+                                                                                              \
+	if( answer.marked ){                                                                  \
+	                                                                                      \
+            --currentQuestion.markedAnswers;                                                  \
+	    answer.marked = false;                                                            \
+	    document.querySelectorAll( "div.popup .options p" )[ index ].className = "";      \
+                                                                                              \
+	} else if( currentQuestion.markedAnswers < currentQuestion.maxAnswers ){              \
+	                                                                                      \
+	    ++currentQuestion.markedAnswers;                                                  \
+	    answer.marked = true;                                                             \
 	    document.querySelectorAll( "div.popup .options p" )[ index ].className = "marked";\
 	}'
      .replace( /index/g, index );
