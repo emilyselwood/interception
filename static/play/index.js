@@ -171,28 +171,28 @@ function displayQuestion( question ){
 
     var element = document.createElement( 'div' );
     element.className = 'popup';
-    element.style.setProperty( 'top', question.point.y );
-    element.style.setProperty( 'left', question.point.x );
+    element.style.setProperty( 'top', 'calc( 50% + ' + ( question.point.y * scale ) + 'px )' );
+    element.style.setProperty( 'left', 'calc( 50% + ' + ( question.point.x * scale ) + 'px )' );
 
     var sectionText = '';
     for( var i = 0; i < data.sections.length; ++i )
         if( data.sections[ i ].name === question.section )
 	   sectionText = data.sections[ i ].content;
     
-    element.innerHTML = '<div class="section">\
-                            <p>SECTION</p>\
-			 </div>\
-			 <div class="main">\
-                            <div class="question">\
-                               QUESTION\
-			    </div>\
-			    <div class="answers">\
-			       <div class="options">\
-			       </div>\
-			       <div class="image">\
+    element.innerHTML = '<div class="section">       \
+                            <p>SECTION</p>           \
+			 </div>                      \
+			 <div class="main">          \
+                            <div class="question">   \
+                               QUESTION              \
+			    </div>                   \
+			    <div class="answers">    \
+			       <div class="options"> \
+			       </div>                \
+			       <div class="image">   \
 			          <img src="IMG-SRC">\
-			       </div>\
-			    </div>\
+			       </div>                \
+			    </div>                   \
 			 </div>'
 	.replace( 'SECTION', '<b>' + question.section + '</b>' + ' - ' + sectionText )
 	.replace( 'QUESTION', '<h1>' + question.index + '</h1><p>' + question.content + '</p>' )
@@ -253,16 +253,15 @@ function displayQuestion( question ){
     element.appendChild( sendEl );
     document.body.appendChild( element );
 
-    window.setTimeout( (function( element ){
-        return function(){
+    window.setTimeout( function(){
  
-            element.classList.add( 'active' );
+        var element = document.body.querySelector( 'div.popup' );
+	element.classList.add( 'active' );
 
-	    element.style.setProperty( 'top', 'calc( 50% - 250px )' );
-	    element.style.setProperty( 'left', 'calc( 50% - 250px )' );
+	element.style.setProperty( 'top', 'calc( 50% - 250px )' );
+	element.style.setProperty( 'left', 'calc( 50% - 250px )' );
 
-	}
-    } )( element ), 4 )
+    }, 20 )
 }
 function getClick( index ){
 
